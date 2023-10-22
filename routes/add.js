@@ -1,9 +1,9 @@
-const dotenv = require("dotenv").config();
 const router = require("express").Router();
 
 const mongoclient = require("mongodb").MongoClient;
 const objId = require("mongodb").ObjectId;
-const url = process.env.DB_URL;
+const url =
+  "mongodb+srv://admin:1234@cluster0.dlxi4ez.mongodb.net/?retryWrites=true&w=majority";
 
 let mydb;
 mongoclient

@@ -1,8 +1,9 @@
-const dotenv = require("dotenv").config();
+// const dotenv = require("dotenv").config();
 
 const mongoclient = require("mongodb").MongoClient;
 const objId = require("mongodb").ObjectId;
-const url = process.env.DB_URL;
+const url =
+  "mongodb+srv://admin:1234@cluster0.dlxi4ez.mongodb.net/?retryWrites=true&w=majority";
 
 let mydb;
 mongoclient
@@ -10,7 +11,7 @@ mongoclient
   .then((client) => {
     mydb = client.db("coffee");
     app.listen(process.env.PORT, () => {
-      console.log(`포트 ${process.env.PORT}으로 서버 실행`);
+      console.log(`포트 8080으로 서버 실행`);
     });
   })
   .catch((err) => {
