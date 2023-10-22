@@ -10,7 +10,7 @@ mongoclient
   .connect(url)
   .then((client) => {
     mydb = client.db("coffee");
-    app.listen(process.env.PORT, () => {
+    app.listen(8080, () => {
       console.log(`포트 8080으로 서버 실행`);
     });
   })
